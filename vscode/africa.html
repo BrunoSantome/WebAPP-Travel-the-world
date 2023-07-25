@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>World Experiences</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="icon" type="image/png" href="images/web_favicon.png">
+    <script src="scripts/popup.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <button id="popup-open" onclick="popupOpen()">☰</button>
+        <a href="p1.html"><img src="images/web_logo.png" alt="Logo_web" class="logo"></a>
+        <nav class="nav-container">
+            <ul class="ul_menu">
+                <li class="li_menu"><a href="p1.html">Home</a></li>
+                <li class="li_menu"><a href="p1.html">About</a></li>
+                <li class="li_menu"><a href="p1.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="botones-container">
+            <button onclick="acceder()" class="boton-header" id="boton-acceso">Iniciar sesión</button>
+            <button onclick="register()" class="boton-header" id="boton-register">Registrarse</button>
+        </div>
+    </header>
+
+    <div id="popup-menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="popupClose()">×</a>
+        <a href="p1.html">Home</a>
+        <a href="p1.html">About</a>
+        <a href="p1.html">Contact</a>
+        <a href="p1.html">Log In</a>
+        <a href="p1.html">Register</a>
+    </div>
+
+    <div id="imagen_grande">
+        <h1 class="secondary_page_title">ÁFRICA</h1>
+        <img class="img_grande" src="images/foto_grande2.jpg">
+    </div>
+
+    <div id="segunda_seccion">
+        <ul>
+            <li class="columna_experiencia">
+                <h3 class="video_title">El Cairo</h3>
+                <img src="images/cairo.jpg" class="img_exp">
+                <video class="video" controls>
+                    <source src="videos/cairo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="parrafo">Viajar a El Cairo, es decir, a la capital de Egipto, es hacerlo a una de las ciudades
+                    más antiguas del mundo. Y es que La Ciudad de los Mil Minaretes, tal y como es conocida en Oriente
+                    Próximo, ha disfrutado de miles de años de apasionante historia, fruto de la cual hoy es posible
+                    disfrutar de las pirámides y muchos otros monumentos.
+
+                    Pero, además, con el paso del tiempo ha logrado convertirse en una de las más importantes urbes del
+                    mundo. Sin duda, la mezcla de modernidad y tradición que en ella se produce es la mejor carta de
+                    presentación de El Cairo para el resto del mundo. ¿A qué esperas para visitarla?</p>
+            </li>
+            <li class="columna_experiencia" class="img_exp">
+                <h3 class="video_title">Marrakech</h3>
+                <img src="images/marrakech.jpg" class="img_exp">
+                <video class="video" controls>
+                    <source src="videos/marrakech.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="parrafo">Descubre la magia de Marrakech, la antigua capital de los imperios almorávide y
+                    almohade, que dominaron las tierras entre el desierto del Sáhara y el río Ebro en el norte de
+                    España. Cruzar las murallas que rodean la medina por alguna de sus impresionantes puertas o babs,
+                    como la bab al-Hadid o la bab Doukkada para llegar hasta la gran plaza Jemaa el-Fna, repleta de
+                    puestos de comida, malabaristas y encantadores de serpientes, es viajar a tiempos remotos. Además,
+                    en la ciudad antigua existen varios zocos, en los que podrás practicar el arte del regateo. Al
+                    atardecer, visita los jardines y el estanque de la Menara.</p>
+            </li>
+            <li id="primera_columna" class="columna_experiencia" class="img_exp">
+                <h3 class="video_title">Ciudad del Cabo</h3>
+                <img src="images/cabo.jpg" class="img_exp">
+                <video class="video" controls>
+                    <source src="videos/cabo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="parrafo">Ciudad del cabo es una de esas ciudades en las que hay pocas posibilidades de
+                    aburrirse. Cada barrio ofrece algo diferente y cuenta con un entorno natural, con playas
+                    paradisíacas y reservas naturales, que la convierten en un destino inigualable. Fundada por los
+                    holandeses en el siglo XVII y posteriormente controlada por los británicos durante un gran periodo
+                    de su historia, actualmente es posible ver ese aire europeo en muchas de sus calles.</p>
+            </li>
+            <li class="columna_experiencia" class="img_exp">
+                <h3 class="video_title">Nairobi</h3>
+                <img src="images/nairobi.jpg" class="img_exp">
+                <video class="video" controls>
+                    <source src="videos/nairobi.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="parrafo">Si eres de los que no paran durante las vacaciones y disfrutan con un programa bien
+                    animado, ¡visitar una capital es una buena opción! Podrás participar en numerosas actividades para
+                    ocupar tus días, alternando museos, compras, parques de atracciones, teatro, restaurantes o,
+                    incluso, festivales. ¿No sabes dónde ir? ¡Deja de buscar! En Nairobi. en África, encontrarás todas
+                    estas actividades y podrás disfrutar de un montón de cosas que hacer. Ya sea en solitario, en
+                    pareja, con la familia o con amigos, cada día encontrarás una actividad. </p>
+            </li>
+            <li class="columna_experiencia" class="img_exp">
+                <h3 class="video_title">Lagos</h3>
+                <img src="images/lagos.jpg" class="img_exp">
+                <video class="video" controls>
+                    <source src="videos/lagos.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="parrafo">¿Buscas grandeza y abundancia? Si lo que deseas son unas vacaciones en la ciudad para
+                    disfrutar de su arquitectura y eres de los que no padecen de vértigo, no te pierdas una de las
+                    ciudades con más rascacielos del mundo. ¡Disfrutarás de puntos panorámicos únicos y podrás comer en
+                    los restaurantes más altos del mundo! En Lagos, en África, puedes agregar muchas actividades
+                    culturales o deportivas a tu programa diario o ir de compras a grandes centros comerciales. ¡Para
+                    todos los gustos! ¿Te atrae la idea de unas vacaciones tocando las nubes? Pues empieza ya a
+                    organizar tu viaje a Lagos, Nigeria. </p>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <footer class="footer">
+        <a href="p1.html"><img class="logo" src="images/web_logo.png" alt="Logo_web"></a>
+        <div id="social-layout">
+            <a href="https://www.uc3m.es/Inicio"><img class="social-media" src="images/logo_uc3m.png" alt="uc3m"></a>
+            <a href="https://www.instagram.com/?hl=es"><img class="social-media" src="images/logo_instagram.png"
+                    alt="instgram"></a>
+            <a href="https://twitter.com/?lang=es"><img class="social-media" src="images/logo_twitter.png"
+                    alt="twitter"></a>
+        </div>
+    </footer>
+
+</body>
+
+
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>World Experiences</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="icon" type="image/png" href="images/web_favicon.png">
+    <script src="scripts/popup.js"></script>
+    <script src="scripts/search.js"></script>
+
+</head>
+
+<body>
+
+
+    <header class="header">
+        <button id="popup-open" onclick="popupOpen()">☰</button>
+        <a href="p1.html"><img src="images/web_logo.png" alt="Logo_web" class="logo"></a>
+
+        <nav class="nav-container">
+            <ul class="ul_menu">
+                <li class="li_menu"><a href="p1.html">Home</a></li>
+                <li class="li_menu"><a href="p1.html">About</a></li>
+                <li class="li_menu"><a href="p1.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="botones-container" id="botones1">
+            <button onclick="openForm() " class="boton-header" id="boton-acceso">Iniciar sesión</button>
+
+
+
+            <button onclick="openRegister()" class="boton-header" id="boton-register">Registrarse</button>
+        </nav>
+
+
+
+
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <button type="button" class="cancel" onclick="closeForm()">x</button>
+                <h1>Login</h1>
+
+                <label>
+                    Usuario<input type="text" placeholder="Enter Username" name="email" id ="USUARIO" required>
+                </label>
+                <label>
+                    Contraseña<input type="password" placeholder="Enter Password" name="psw" id = "CONTRASEÑA_LOG"required>
+                </label>
+
+                
+                <button type="submit" onclick="acceder()" class="btn">Iniciar sesión</button>
+            </form>
+        </div>
+    </header>
+
+
+
+    <div class="form-popup" id="myRegistration">
+        <form  class="form-container" onsubmit="return check()">
+
+            <button type="button" class="cancel" onclick="closeRegister()">x</button>
+            <h1>Register</h1>
+            <hr>
+
+            <label>
+                Nombre de usuario<input type="text" name="nombre_usuario" id="nombre_usuario" required />
+            </label>
+
+            <label>
+                Contraseña<input type="text" name="CONTRASEÑA" id="CONTRASEÑA" required />
+            </label>
+
+            <label>
+                Nombre<input type="text" name="NOMBRE" id="NOMBRE" required />
+            </label>
+
+            <label>
+                Apellidos<input type="text" name="APELLIDOS" id="APELLIDOS" required />
+            </label>
+
+            <label>
+                Email<input type="email" name="EMAIL" id="EMAIL" required />
+            </label>
+
+            <label>
+                Fecha de nacimiento<input type="text" name="FECHA_NACIMIENTO" id="FECHA_NACIMIENTO" required />
+            </label>
+
+            <label>
+                
+            <label for="interes">Intereses</label>
+            <select type="text" id="interes">
+              <option value="0" selected>.</option>
+              <option value="1">Turismo cultural</option>
+              <option value="2">Turismo ambiental</option>
+              <option value="3">Turismo histórico</option>
+              <option value="4">Turismo de negocios</option>
+            </select>
+                
+            </label>
+            <label for="myCheck" id="mycheck-label">He leído y acepto las Condiciones de uso:</label> 
+            <input type="checkbox" id="myCheck" >
+            <input type="reset" class="boton-borrar" value="Borrar">
+
+            
+            <button type="submit" class="btn">Guardar</button>
+        </form>
+
+    </div>
+
+
+
+
+
+    <div id="popup-menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="popupClose()">×</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Log In</a>
+        <a href="#">Register</a>
+    </div>
+
+
+    <div class="center-container">
+
+        <nav id="cont1">
+            <h2 id="titulo_map" class="titulos">Map</h2>
+
+
+        </nav>
+
+        <img id="mapa" src="images/MapaMundi.png" alt="mapa" usemap="#image-map">
+
+        <map name="image-map">
+            <area target="1" alt="América" title="América" href="america.html"
+                coords="38,93,43,79,48,68,48,53,43,44,33,45,14,54,1,56,13,45,26,29,48,21,60,25,70,24,83,25,97,18,113,11,141,4,159,4,179,3,203,0,216,3,223,8,213,19,206,28,189,36,176,43,153,53,151,64,153,70,139,74,125,81,114,89,109,99,99,105,99,119,77,110,68,118,69,127,74,130,87,127,89,139,90,147,94,154,103,150,117,149,127,152,134,159,143,164,148,174,154,177,163,182,169,192,167,202,164,213,161,223,152,231,148,238,146,247,139,256,133,262,132,272,136,283,139,296,131,291,123,283,119,273,119,263,117,251,115,241,114,224,109,211,102,197,93,187,95,175,98,163,80,143,70,138,59,135,48,123,43,113"
+                shape="poly">
+            <area target="2" alt="Europa" title="Europa" href="europa.html"
+                coords="219,78,217,86,218,92,223,95,232,89,237,81,244,77,251,83,255,90,266,93,275,94,290,97,288,106,292,115,297,129,305,139,315,141,324,134,329,124,334,119,342,121,348,129,352,140,363,159,365,144,371,130,380,124,386,131,392,139,394,147,396,161,389,168,394,180,401,185,424,192,441,198,445,208,425,225,420,231,416,244,423,250,442,244,448,254,456,265,469,254,476,245,480,228,474,211,472,200,485,187,489,180,441,159,438,147,435,137,426,125,427,106,420,92,419,84,431,95,445,102,453,91,453,79,451,72,460,58,463,48,470,34,475,31,455,25,417,22,381,18,354,11,334,6,286,29,271,25,257,24,240,41,220,29,202,30,211,72"
+                shape="poly">
+            <area target="3" alt="África" title="África" href="africa.html"
+                coords="222,99,217,107,206,120,202,129,202,137,201,148,208,159,216,166,226,166,238,163,243,170,247,184,251,190,253,200,249,211,250,218,255,227,256,238,261,253,270,252,279,249,285,237,290,229,307,233,313,227,315,212,314,203,297,184,304,174,310,170,319,150,304,148,295,136,289,124,290,111,285,104,245,94,235,94"
+                shape="poly">
+            <area target="4" alt="Ámerica" title="América" href="america.html"
+                coords="109,118,109,124,114,128,125,135,136,139,148,137,147,129,133,124,121,120" shape="poly">
+            <area target="5" alt="Europa" title="Europa" href="europa.html"
+                coords="500,256,491,265,477,277,488,280,501,276,511,262,507,248" shape="poly">
+            <area target="6" alt="África" title="África" href="africa.html"
+                coords="232,1,236,9,248,12,260,11,270,10,280,12,292,16,306,22,313,14,321,5,280,0" shape="poly">
+        </map>
+
+
+    </div>
+
+    <div class="busq">
+        <h2 id="searcharea" class="titulos">Search area</h2>
+        <div class="field" id="searchform">
+            <input type="text" id="searchterm" placeholder="Insert desired search" />
+            <button type="button" onclick="searchExperience()" id="search">Search</button>
+        </div>
+    </div>
+
+    <h2 id=titulo_exp class="titulos">Experiences</h2>
+    <div class="Columnas">
+
+        <nav id="columna1">
+            <div id="Madrid" class="experience">
+                <img src="images/Madrid.jpg" alt="Img_Madrid" class="Img_Exp">
+                <h3 class="Titulo">Viaje a Madrid</h3>
+                <p class="piefoto">Madrid es un municipio y una ciudad de España. La localidad, con categoría histórica
+                    de
+                    villa, es la capital del Estado10​ y de la Comunidad de Madrid. En su término municipal, el más
+                    poblado
+                    de España, viven 3 334 730 personas empadronadas, según el INE de 2020. El área metropolitana
+                    asociada
+                    tiene una población de 6 779 888 habitantes, la segunda de la Unión Europea, según la fuente, tras
+                    la de
+                    París, y en otras fuentes detrás también de la Región del Ruhr, así como la segunda ciudad más
+                    poblada
+                    de la Unión Europea, por detrás de Berlín.</p>
+            </div>
+
+            <div id="LosÁngeles" class="experience">
+                <img src="images/losangeles.jpg" alt="Img_LosAngeles" class="Img_Exp">
+                <h3 class="Titulo">Viaje a Los Ángeles</h3>
+                <p class="piefoto">Los Ángeles es una ciudad en rápido crecimiento del Sur de California y es el núcleo
+                    de
+                    la industria televisiva y cinematográfica del país. Cerca de su icónico letrero de Hollywood,
+                    estudios
+                    como Paramount Pictures, Universal y Warner Brothers ofrecen recorridos tras bambalinas. En
+                    Hollywood
+                    Boulevard, el Teatro Chino de Grauman luce las huellas de pies y manos de celebridades, el Paseo de
+                    la
+                    Fama conmemora a miles de estrellas y los vendedores ofrecen mapas de las casas de los famosos.</p>
+            </div>
+            <div id="París" class="experience">
+                <img src="images/paris.jpg" alt="Img_Paris" class="Img_Exp">
+                <h3 class="Titulo">Viaje a París</h3>
+                <p class="piefoto">París, la capital de Francia, es una importante ciudad europea y un centro mundial
+                    del
+                    arte, la moda, la gastronomía y la cultura. Su paisaje urbano del siglo XIX está entrecruzado por
+                    amplios bulevares y el río Sena. Aparte de estos hitos, como la Torre Eiffel y la catedral gótica de
+                    Notre Dame del siglo XII, la ciudad es famosa por su cultura del café y las tiendas de moda de
+                    diseñador
+                    a lo largo de la calle Rue du Faubourg Saint-Honoré.</p>
+            </div>
+        </nav>
+
+        <nav id="columna2">
+            <div id="RíoDeJaneiro" class="experience">
+                <img src="images/rio.jpg" alt="Img_Rio" class="Img_Exp">
+                <h3 class="Titulo">Viaje a Río de Janeiro</h3>
+                <p class="piefoto">Río de Janeiro es una enorme ciudad costera de Brasil, famosa por sus playas de
+                    Copacabana e Ipanema, la estatua del Cristo Redentor de 38 m de alto sobre el cerro del Corcovado y
+                    el
+                    morro Pan de Azúcar, una cima de granito con teleféricos que ascienden a su cima. La ciudad también
+                    es
+                    conocida por sus extensas favelas. El estridente festival del Carnaval, con desfiles de carros
+                    alegóricos, extravagantes disfraces y bailarines de samba, es considerado el más grande del mundo.
+                </p>
+            </div>
+
+            <div id="Pekín" class="experience">
+                <img src="images/Pekin.jpg" alt="Img_Pekin" class="Img_Exp">
+                <h3 class="Titulo">Viaje a Pekín</h3>
+                <p class="piefoto">Pekín, la enorme capital de China, tiene una historia que se remonta a 3 milenios.
+                    Aun
+                    así, es conocida tanto por su arquitectura moderna como por sus sitios antiguos, como el complejo de
+                    la
+                    Ciudad Prohibida, el palacio imperial durante las dinastías Ming y Qing. Cerca, en la enorme plaza
+                    peatonal de Tiananmén, se encuentra el mausoleo de Mao Zedong y el Museo Nacional de China, que
+                    exhibe
+                    una amplia colección de reliquias culturales.</p>
+            </div>
+
+            <div id="Nairobi" class="experience">
+                <img src="images/nairobi.jpg" alt="Img_Nairobi" class="Img_Exp">
+                <h3 class="Titulo">Viaje a Nairobi</h3>
+                <p class="piefoto">Nairobi es la capital de Kenia. Además de su centro urbano, la ciudad tiene el Parque
+                    Nacional de Nairobi, una gran reserva de caza conocida por criar rinocerontes negros en peligro de
+                    extinción y albergar jirafas, cebras y leones. Junto a ella, hay un prestigioso orfanato de
+                    elefantes
+                    administrado por David Sheldrick Wildlife Trust. Nairobi, a menudo, sirve como punto de partida para
+                    realizar recorridos de safari por otros lugares de Kenia.</p>
+            </div>
+        </nav>
+
+        <nav id="columna3">
+            <div id="NuevaYork" class="experience">
+                <img src="images/nuevayork.jpg" alt="Img_NuevaYork" class="Img_Exp">
+                <h3 class="Titulo">Viaje a Nueva York</h3>
+                <p class="piefoto">Nueva York incluye 5 distritos que se ubican donde el río Hudson desemboca en el
+                    océano
+                    Atlántico. En su centro se encuentra Manhattan, un distrito densamente poblado que se encuentra
+                    entre
+                    los principales centros comerciales, financieros y culturales del mundo. Sus sitios icónicos
+                    incluyen
+                    rascacielos, como el Empire State Building, y el amplio Central Park. El teatro Broadway se ubica en
+                    la
+                    zona del Times Square iluminada con neones.</p>
+            </div>
+
+            <div id="Marrakech" class="experience">
+                <img src="images/marrakech.jpg" alt="Img_Marraketch" class="Img_Exp">
+                <h3 class="Titulo">Viaje a Marrakech</h3>
+                <p class="piefoto">Marrakech es una antigua ciudad imperial en el oeste de Marruecos y un importante
+                    centro
+                    económico con mezquitas, palacios y jardines. La medina es una ciudad medieval amurallada y
+                    densamente
+                    poblada que data del período del Imperio Bereber, con pasajes que parecen laberintos y animados
+                    zocos
+                    (mercados) que venden cerámicas, joyas y tejidos tradicionales. El minarete morisco de la mezquita
+                    Kutubía del siglo XII es un símbolo de la ciudad visible desde millas de distancia.</p>
+            </div>
+
+            <div id="Tokio" class="experience">
+                <img src="images/tokio.jpg" alt="Img_Tokio" class="Img_Exp">
+                <h3 class="Titulo">Viaje a Tokio</h3>
+                <p class="piefoto">Tokio, la ajetreada capital de Japón, mezcla lo ultramoderno y lo tradicional, desde
+                    los
+                    rascacielos iluminados con neones hasta los templos históricos. El opulento santuario Shinto Meiji
+                    es
+                    conocido por su puerta altísima y los bosques circundantes. El Palacio Imperial se ubica en medio de
+                    grandes jardines públicos. Los distintos museos de la ciudad ofrecen exhibiciones que van desde el
+                    arte
+                    clásico (en el Museo Nacional de Tokio) hasta un teatro kabuki reconstruido (en el Museo Edo-Tokyo).
+                </p>
+            </div>
+        </nav>
+
+    </div>
+
+
+    <footer class="footer">
+        <a href="p1.html"><img class="logo" src="images/web_logo.png" alt="Logo_web"></a>
+        <div id="social-layout">
+            <a href="https://www.uc3m.es/Inicio"><img class="social-media" src="images/logo_uc3m.png" alt="uc3m"></a>
+            <a href="https://www.instagram.com/?hl=es"><img class="social-media" src="images/logo_instagram.png"
+                    alt="instgram"></a>
+            <a href="https://twitter.com/?lang=es"><img class="social-media" src="images/logo_twitter.png"
+                    alt="twitter"></a>
+        </div>
+    </footer>
+
+</body>
+
+
+</html>
